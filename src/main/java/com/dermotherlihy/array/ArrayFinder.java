@@ -12,7 +12,8 @@ public class ArrayFinder {
     /**
      * Validate the input arguments. If validation fails return NoSuchElementException.
      *
-     * Next, take the first element of second array and establish if is contained in first array contains it. Search the first array up until the length of second array from the end.
+     * Take the first element of second array and establish if is contained in first array.
+     * Search the first array up until the length of second array from the end.
      * It is not possible for second array to fit after this point.
      *
      * If first element of second array is found successfully, check other elements and return the index if successful.
@@ -33,20 +34,20 @@ public class ArrayFinder {
         }
         else {
             String start = secondArray[0];
-            for (int i = 0; i <= (firstArray.length - secondArray.length); i++) {
-                if (start.equals(firstArray[i])) {
+            for (int firstArrayIndex = 0; firstArrayIndex <= (firstArray.length - secondArray.length); firstArrayIndex++) {
+                if (start.equals(firstArray[firstArrayIndex])) {
                     boolean matched = true;
                     if (secondArray.length > 1) {
-                        for (int j = 1; j < secondArray.length; j++) {
-                            if (!secondArray[j].equals(firstArray[i + j])) {
+                        for (int secondArrayIndex = 1; secondArrayIndex < secondArray.length; secondArrayIndex++) {
+                            if (!secondArray[secondArrayIndex].equals(firstArray[firstArrayIndex + secondArrayIndex])) {
                                 matched = false;
                             }
                         }
                         if (matched) {
-                            return i;
+                            return firstArrayIndex;
                         }
                     } else {
-                        return i;
+                        return firstArrayIndex;
                     }
 
                 }
