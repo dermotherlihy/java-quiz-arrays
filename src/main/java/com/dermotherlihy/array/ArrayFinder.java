@@ -14,7 +14,7 @@ public class ArrayFinder {
      *
      * Take the first element of second array and establish if is contained in first array.
      * Search the first array up until the length of second array from the end.
-     * It is not possible for second array to fit after this point.
+     * It is not possible for second array to exist in first array after this point.
      *
      * If first element of second array is found successfully, check other elements and return the index if successful.
      * Otherwise search for next instance of starting element and repeat checks.
