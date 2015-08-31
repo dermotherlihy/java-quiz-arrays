@@ -11,9 +11,9 @@ import java.util.NoSuchElementException;
  * Next, I take the first element of second array and establish if the first array contains it. I will only search the first array up until the length of second array elements from the end.
  * As even if the element is contained in the first array but it is after this point, I do not need to check it as it is not possible for second array to fit in first array after this point.
  *
- * If I find the first element if second array in the first array successfully, I then proceed to check for the other elements. If I find the other elements, I will return the index, otherwise,
+ * If I find the first element of second array in the first array successfully, I then proceed to check for the other elements. If found, I will return the index, otherwise,
  * code will search for next instance of second array starting element in first array and repeat checks.
- * If I have exhaused all possiblities and have not found the second array, I return a NoSuchElement exception.
+ * If I have exhaused all possiblities and have not found the second array, I return a NoSuchElementException.
  *
  *
  *
